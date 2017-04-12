@@ -103,5 +103,5 @@ exports.pets = [
     breed: 'Snowshoe',
     gender: 'Female',
     age: 6 + ' months'
-  },
+  }
 ]
