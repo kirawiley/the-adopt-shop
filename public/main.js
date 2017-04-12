@@ -27,7 +27,7 @@ function renderPets(pet) {
 
   var petImage = document.createElement('img')
   petImage.setAttribute('id', 'pet-picture')
-  petImage.textContent = pet.image // doesn't exist yet
+  petImage.setAttribute('src', pet.image)
 
   var petDetails = document.createElement('p')
   petDetails.setAttribute('id', 'pet-details')

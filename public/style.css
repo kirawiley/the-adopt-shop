@@ -1,10 +1,10 @@
 #panel-container {
-  position: relative;
   margin-top: 5%;
   width: 50%;
 }
 
 #panel-body {
+  position: relative;
   background-color: #b0dbf2;
 }
 
@@ -17,7 +17,7 @@
 }
 
 #pet-details {
-  /* position: absolute; */
+  position: absolute;
   left: 25%;
   top: 25%;
   font-size: 15px;
