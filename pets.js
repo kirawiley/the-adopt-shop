@@ -32,14 +32,14 @@ exports.pets = [
     name: 'Bailey',
     breed: 'Golden Retriever',
     gender: 'Male',
-    age: 10 + 'months'
+    age: 10 + ' months'
   },
   {
     type: 'Dog',
     name: 'Skye',
     breed: 'Great Dane',
     gender: 'Female',
-    age: 5 + 'months'
+    age: 5 + ' months'
   },
   {
     type: 'Dog',

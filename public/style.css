@@ -17,7 +17,7 @@
 }
 
 #pet-details {
-  position: absolute;
+  /* position: absolute; */
   left: 25%;
   top: 25%;
   font-size: 15px;

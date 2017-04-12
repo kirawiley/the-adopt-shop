@@ -10,19 +10,19 @@ var panelContainer = document.getElementById('panel-container')
 
 function renderPets(pet) {
   var panel = document.createElement('div')
-  panel.className('panel')
-  panel.className('panel-primary')
+  panel.classList.add('panel')
+  panel.classList.add('panel-primary')
 
   var panelHeading = document.createElement('div')
-  panelHeading.className('panel-heading')
+  panelHeading.classList.add('panel-heading')
 
   var petName = document.createElement('h3')
-  petName.className('panel-title')
+  petName.classList.add('panel-title')
   petName.setAttribute('id', 'pet-name')
   petName.textContent = pet.name
 
   var panelBody = document.createElement('div')
-  panelBody.className('panel-body')
+  panelBody.classList.add('panel-body')
   panelBody.setAttribute('id', 'panel-body')
 
   var petImage = document.createElement('img')
@@ -33,12 +33,12 @@ function renderPets(pet) {
   petDetails.setAttribute('id', 'pet-details')
   petDetails.textContent = pet.breed + ' - ' + pet.age + ' - ' + pet.gender
 
-  panelContainer.appendChild(panel)
   panel.appendChild(panelHeading)
-  panelHeading.appendChild(petName)
   panel.appendChild(panelBody)
+  panelHeading.appendChild(petName)
   panelBody.appendChild(petImage)
   panelBody.appendChild(petDetails)
+  panelContainer.appendChild(panel)
 
   return panel
 }

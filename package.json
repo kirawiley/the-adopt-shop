@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A website for potential pet owners who want to adopt a pet.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "watch": "nodemon",
+    "start": "node ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kirawiley/the-adopt-shop.git"
