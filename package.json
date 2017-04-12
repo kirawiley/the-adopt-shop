@@ -1,0 +1,25 @@
+{
+  "name": "the-adopt-shop",
+  "version": "1.0.0",
+  "description": "A website for potential pet owners who want to adopt a pet.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirawiley/the-adopt-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirawiley/the-adopt-shop/issues"
+  },
+  "homepage": "https://github.com/kirawiley/the-adopt-shop#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

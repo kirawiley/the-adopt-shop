@@ -1,0 +1,31 @@
+/* body {
+  background-image: url("http://adoptrva.com/wp-content/uploads/2015/02/paw-print-background-1600x1600.jpg");
+  background-size: 97%;
+  background-repeat: no-repeat;
+} */
+
+#panel-container {
+  position: relative;
+  margin-top: 5%;
+  width: 50%;
+}
+
+#panel-body {
+  background-color: #b0dbf2;
+}
+
+#pet-name {
+  font-weight: 200;
+}
+
+#pet-picture {
+  width: 20%;
+}
+
+#pet-details {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  font-size: 15px;
+  color: #1a6bb2;
+}
