@@ -1,9 +1,31 @@
+.invisible {
+  display: none;
+}
+
+body {
+  background-image: url(cat-dog-friends.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#search-well {
+  border-style: none;
+  background: rgba(94, 96, 109, 0.3);
+  margin-top: 35%;
+  white-space: nowrap;
+}
+
+.dropdown-toggle {
+  width: 15%;
+  text-align: left;
+}
+
 #panel-container {
   margin-top: 5%;
   width: 50%;
 }
 
-#panel-body {
+.panel-body {
   position: relative;
   background-color: #b0dbf2;
 }

@@ -10,7 +10,49 @@
   </head>
   <body>
 
-    <div class="container" id="panel-container">
+    <div class="container" id="form-container">
+      <div class="well" id="search-well">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="type-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Type
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Dog</a></li>
+            <li><a href="#">Cat</a></li>
+            <li><a href="#">All</a></li>
+          </ul>
+      </div>
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="breed-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Breed (Optional)
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Breed 1</a></li>
+            <li><a href="#">Breed 2</a></li>
+            <li><a href="#">Breed 3</a></li>
+          </ul>
+      </div>
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="gender-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Gender
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>Female</li>
+            <li>Male</li>
+            <li>Either</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container invisible" id="panel-container">
     </div>
 
     <script src="main.js"></script>

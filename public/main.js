@@ -23,7 +23,6 @@ function renderPets(pet) {
 
   var panelBody = document.createElement('div')
   panelBody.classList.add('panel-body')
-  panelBody.setAttribute('id', 'panel-body')
 
   var petImage = document.createElement('img')
   petImage.setAttribute('id', 'pet-picture')
