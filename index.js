@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
 var parseRequests = bodyParser.json()
-var pets = require('./pets').pets
+var pets = require('./pets')
 
 app.use(parseRequests)
 

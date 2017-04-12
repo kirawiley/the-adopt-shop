@@ -2,8 +2,8 @@ fetch('/pets')
   .then((response) => {
     return response.json()
   })
-  .then((pet) => {
-    pet.forEach(renderPets)
+  .then((pets) => {
+    pets.forEach(renderPets)
   })
 
 var panelContainer = document.getElementById('panel-container')

@@ -4,7 +4,7 @@
   "description": "A website for potential pet owners who want to adopt a pet.",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon",
+    "watch": "nodemon .",
     "start": "node ."
   },
   "repository": {
