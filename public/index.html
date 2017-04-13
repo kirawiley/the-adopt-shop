@@ -13,11 +13,56 @@
   <body>
 
     <div class="container" id="form-container">
+      <h2 id="slogan">Your new best friend is a click away...</h2>
+
+      <div class="well">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="type-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Type
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Dog</a></li>
+            <li><a href="#">Cat</a></li>
+            <li><a href="#">All</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="breed-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Breed (Optional)
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="#">Breed 1</a></li>
+            <li><a href="#">Breed 2</a></li>
+            <li><a href="#">Breed 3</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="gender-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Gender
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+            <li><a href="#">Female</a></li>
+            <li><a href="#">Male</a></li>
+            <li><a href="#">Either</a></li>
+          </ul>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="find-pet-button">
+            <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Find a Pet!</button>
+      </div>
     </div>
 
     <div class="container invisible" id="panel-container">
     </div>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>
