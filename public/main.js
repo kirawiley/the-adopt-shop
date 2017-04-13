@@ -46,7 +46,7 @@ function renderPets(pet) {
 function renderSlogan() {
   var slogan = document.createElement('h2')
   slogan.setAttribute('id', 'slogan')
-  slogan.textContent = 'Your new best friend is a click away...'
+  slogan.textContent = 'Your new best friend is just a click away...'
 
   formContainer.appendChild(slogan)
 
@@ -85,7 +85,7 @@ function renderForm() {
   typeDogOption.textContent = 'Dog'
 
   var typeCatOption = document.createElement('li')
-  typeCatOption.textContent = 'Dog'
+  typeCatOption.textContent = 'Cat'
 
   var typeAllOption = document.createElement('li')
   typeAllOption.textContent = 'All'
@@ -173,6 +173,12 @@ function renderForm() {
   findPetButton.setAttribute('type', 'button')
   findPetButton.setAttribute('id', 'find-pet-button')
   findPetButton.textContent = 'Find a Pet! '
+
+  findPetButton.addEventListener('submit', function (event) {
+      event.preventDefault()
+
+      console.log(typeDropdownMenu.value)
+    })
 
   var pawIcon = document.createElement('i')
   pawIcon.classList.add('fa')

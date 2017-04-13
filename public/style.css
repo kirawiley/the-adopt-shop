@@ -10,7 +10,7 @@ body {
 }
 
 #slogan {
-  margin-top: 45%;
+  margin-top: 500px;
   font-family: 'Montserrat';
   color: #1a6bb2;
 }
@@ -18,7 +18,7 @@ body {
 .well {
   position: absolute;
   top: 50%;
-  width: 35%;
+  width: 900px;
   border-style: none;
   background: rgba(94, 96, 109, 0.3);
   transform: translateY(-50%)
