@@ -4,20 +4,38 @@
 
 body {
   background-image: url(cat-dog-friends.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
-#search-well {
+#slogan {
+  margin-top: 45%;
+  font-family: 'Montserrat';
+  color: #1a6bb2;
+}
+
+.well {
+  position: absolute;
+  top: 50%;
   border-style: none;
   background: rgba(94, 96, 109, 0.3);
-  margin-top: 35%;
-  white-space: nowrap;
+  transform: translateY(-50%)
+}
+
+.dropdown {
+  display: inline-block;
 }
 
 .dropdown-toggle {
-  width: 15%;
   text-align: left;
+  width: 200px;
+}
+
+.caret {
+  position: absolute;
+  top: 15px;
+  right: 10px;
 }
 
 #panel-container {
