@@ -1,0 +1,25 @@
+#panel-container {
+  margin-top: 5%;
+  width: 50%;
+}
+
+.panel-body {
+  position: relative;
+  background-color: #b0dbf2;
+}
+
+.pet-name {
+  font-weight: 200;
+}
+
+.pet-picture {
+  width: 20%;
+}
+
+.pet-details {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  font-size: 15px;
+  color: #1a6bb2;
+}
