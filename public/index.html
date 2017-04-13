@@ -13,56 +13,39 @@
   <body>
 
     <div class="container" id="form-container">
-      <h2 id="slogan">Your new best friend is a click away...</h2>
+      <h2 id="slogan">Your new best friend is just a click away...</h2>
 
       <div class="well">
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="type-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Type
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Dog</a></li>
-            <li><a href="#">Cat</a></li>
-            <li><a href="#">All</a></li>
-          </ul>
-        </div>
+        <form id="pet-form">
+          <select id="type">
+            <option value="">Type</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+          </select>
 
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="breed-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Breed (Optional)
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <li><a href="#">Breed 1</a></li>
-            <li><a href="#">Breed 2</a></li>
-            <li><a href="#">Breed 3</a></li>
-          </ul>
-        </div>
+          <select id="breed">
+            <option value="">Breed (Optional)</option>
+            <option value="breed1">Breed 1</option>
+            <option value="breed2">Breed 2</option>
+            <option value="breed3">Breed 3</option>
+          </select>
 
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="gender-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Gender
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-            <li><a href="#">Female</a></li>
-            <li><a href="#">Male</a></li>
-            <li><a href="#">Either</a></li>
-          </ul>
-        </div>
+          <select id="gender">
+            <option value="">Gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="either">Either</option>
+          </select>
 
         <button type="button" class="btn btn-primary" id="find-pet-button">
             <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Find a Pet!</button>
+        </form>
       </div>
     </div>
 
     <div class="container invisible" id="panel-container">
     </div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-    crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>

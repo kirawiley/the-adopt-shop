@@ -10,9 +10,19 @@ body {
 }
 
 #slogan {
-  margin-top: 500px;
+  margin-top: 45%;
   font-family: 'Montserrat';
   color: #1a6bb2;
+}
+
+select {
+  text-align: center;
+  width: 20%;
+  margin-left: 5%;
+}
+
+#find-pet-button {
+  margin-left: 10%;
 }
 
 .well {
@@ -22,22 +32,6 @@ body {
   border-style: none;
   background: rgba(94, 96, 109, 0.3);
   transform: translateY(-50%)
-}
-
-.dropdown {
-  display: inline-block;
-  margin-right: 5%;
-}
-
-.dropdown-toggle {
-  text-align: left;
-  width: 200px;
-}
-
-.caret {
-  position: absolute;
-  top: 15px;
-  right: 10px;
 }
 
 #panel-container {

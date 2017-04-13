@@ -42,3 +42,20 @@ function renderPets(pet) {
 
   return panel
 }
+
+var typeInput = document.querySelector('#type')
+var breedInput = document.querySelector('#breed')
+var genderInput = document.querySelector('#gender')
+var findPetButton = document.getElementById('find-pet-button')
+
+findPetButton.addEventListener('click', (event) => {
+  if (typeInput.value === '') {
+    alert('Please choose a type of pet!')
+  }
+  else if (genderInput.value === '') {
+    alert('Please choose a gender!')
+  }
+  console.log(typeInput.value)
+  console.log(breedInput.value)
+  console.log(genderInput.value)
+})
