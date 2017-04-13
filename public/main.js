@@ -18,19 +18,18 @@ function renderPets(pet) {
 
   var petName = document.createElement('h3')
   petName.classList.add('panel-title')
-  petName.setAttribute('id', 'pet-name')
+  petName.classList.add('pet-name')
   petName.textContent = pet.name
 
   var panelBody = document.createElement('div')
   panelBody.classList.add('panel-body')
-  panelBody.setAttribute('id', 'panel-body')
 
   var petImage = document.createElement('img')
-  petImage.setAttribute('id', 'pet-picture')
+  petImage.classList.add('pet-picture')
   petImage.setAttribute('src', pet.image)
 
   var petDetails = document.createElement('p')
-  petDetails.setAttribute('id', 'pet-details')
+  petDetails.classList.add('pet-details')
   petDetails.textContent = pet.breed + ' - ' + pet.age + ' - ' + pet.gender
 
   panel.appendChild(panelHeading)
