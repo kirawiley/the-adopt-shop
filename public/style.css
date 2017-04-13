@@ -18,6 +18,7 @@ body {
 .well {
   position: absolute;
   top: 50%;
+  width: 35%;
   border-style: none;
   background: rgba(94, 96, 109, 0.3);
   transform: translateY(-50%)
@@ -25,6 +26,7 @@ body {
 
 .dropdown {
   display: inline-block;
+  margin-right: 5%;
 }
 
 .dropdown-toggle {
@@ -48,15 +50,15 @@ body {
   background-color: #b0dbf2;
 }
 
-#pet-name {
+.pet-name {
   font-weight: 200;
 }
 
-#pet-picture {
+.pet-picture {
   width: 20%;
 }
 
-#pet-details {
+.pet-details {
   position: absolute;
   left: 25%;
   top: 25%;
