@@ -1,13 +1,9 @@
-fetch('/pets')
-  .then((response) => {
-    return response.json()
-  })
-  .then((pets) => {
-    pets.forEach(renderPets)
-  })
-
 var panelContainer = document.getElementById('panel-container')
 var formContainer = document.getElementById('form-container')
+var typeInput = document.querySelector('#type')
+var breedInput = document.querySelector('#breed')
+var genderInput = document.querySelector('#gender')
+var findPetButton = document.getElementById('find-pet-button')
 
 function renderPets(pet) {
   var panel = document.createElement('div')
@@ -43,11 +39,6 @@ function renderPets(pet) {
   return panel
 }
 
-var typeInput = document.querySelector('#type')
-var breedInput = document.querySelector('#breed')
-var genderInput = document.querySelector('#gender')
-var findPetButton = document.getElementById('find-pet-button')
-
 findPetButton.addEventListener('click', (event) => {
   if (typeInput.value === '') {
     alert('Please choose a type of pet!')
@@ -55,10 +46,29 @@ findPetButton.addEventListener('click', (event) => {
   else if (genderInput.value === '') {
     alert('Please choose a gender!')
   }
+
+  fetch('/pets')
+    .then((response) => {
+      return response.json()
+    })
+    .then((pets) => {
+      pets.forEach(renderPets)
+    })
+
   var searchParams = {
     type: typeInput.value,
     breed: breedInput.value,
     gender: genderInput.value
   }
-  console.log(searchParams)
+
+  function makeQueryString() {
+    var searchProperties = Object.keys(searchParams)
+    var queryString = '?' + searchProperties[0] + '=' + searchParams.type + '&' + searchProperties[2] + '=' + searchParams.gender
+
+    if (searchParams.breed !== '') {
+      queryString = '?' + searchProperties[0] + '=' + searchParams.type + '&' + searchProperties[1] + '=' + searchParams.breed + '&' + searchProperties[2] + '=' + searchParams.gender
+    }
+    return queryString
+  }
+  console.log(makeQueryString(searchParams))
 })
