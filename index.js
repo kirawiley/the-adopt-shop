@@ -15,7 +15,7 @@ app.get('/pets', (req, res) => {
   var breed = queryParams.breed
   var gender = queryParams.gender
 
-  res.json(findPets(type, gender, pets))
+  res.json(findPets(type, breed, gender, pets))
 })
 
 
