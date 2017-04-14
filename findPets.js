@@ -1,21 +1,14 @@
-module.exports = function findPets(type, breed, gender, pets) {
+module.exports = function findPets(type, gender, pets) {
   var searchedPets = []
 
-  if (/* ? */.type !== '' && /* ? */.gender !== '') {
-    searchedPets = pets.filter(() => {
-      /* ? */.type.toLowerCase() === pets.type.toLowerCase()
+   searchedPets = pets.filter((pet) => {
+    if (type !== '') {
+      return type.toLowerCase() === pet.type.toLowerCase()
+    }
 
-      /* ? */.gender.toLowerCase() === pets.gender.toLowerCase()
-
-      return searchedPets
-    })
-  }
-
-  if(/* ? */.breed !== '') {
-    searchedPets = pets.filter(() => {
-      /* ? */.breed.toLowerCase() === pets.breed.toLowerCase()
-
-      return searchedPets
-    })
-  }
+    if (gender !== '') {
+      return gender.toLowerCase() === pet.gender.toLowerCase()
+    }
+  })
+  return searchedPets
 }
