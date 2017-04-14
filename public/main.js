@@ -55,7 +55,4 @@ findPetButton.addEventListener('click', (event) => {
   else if (genderInput.value === '') {
     alert('Please choose a gender!')
   }
-  console.log(typeInput.value)
-  console.log(breedInput.value)
-  console.log(genderInput.value)
 })
