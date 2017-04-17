@@ -3,8 +3,8 @@ module.exports = function findPets(type, breed, gender, pets) {
 
   if (type !== '') {
    searchedPets = pets.filter((pet) => {
-    return type.toLowerCase() === pet.type.toLowerCase()
-  })
+     return type.toLowerCase() === pet.type.toLowerCase()
+    })
   }
 
   if (breed !== '') {
