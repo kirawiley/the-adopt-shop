@@ -47,6 +47,7 @@ function makeQueryString(params) {
       queryString += property + '=' + params[property] + '&'
     }
   })
+  queryString = queryString.slice(0, -1)
   return queryString
 }
 
@@ -74,6 +75,9 @@ findPetButton.addEventListener('click', (event) => {
   }
 
   fetchPets()
+
+  //formContainer.classList.add('invisible')
+  //panelContainer.classList.remove('invisible')
 
   console.log(makeQueryString(searchParams))
 })
