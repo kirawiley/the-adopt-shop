@@ -1,19 +1,19 @@
 module.exports = function findPets(type, breed, gender, pets) {
   var searchedPets = []
 
-  if (type !== '') {
+  if (type !== '' && type !== undefined) {
    searchedPets = pets.filter((pet) => {
      return type.toLowerCase() === pet.type.toLowerCase()
     })
   }
 
-  if (breed !== '') {
+  if (breed !== '' && breed !== undefined) {
     searchedPets = searchedPets.filter((pet) => {
       return breed.toLowerCase() === pet.breed.toLowerCase()
     })
   }
 
-  if (gender !== '') {
+  if (gender !== '' && gender !== undefined) {
     searchedPets = searchedPets.filter((pet) => {
       return gender.toLowerCase() === pet.gender.toLowerCase()
     })

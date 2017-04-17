@@ -2,21 +2,25 @@
   display: none;
 }
 
-body {
+#search-view {
   background-image: url(cat-dog-friends.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-.logo {
+#logo {
   position: absolute;
   top: 3%;
   left: 3%;
 }
 
+#logo:hover {
+  cursor: pointer;
+}
+
 #slogan {
-  margin-top: 45%;
+  margin-top: 40%;
   font-family: 'Montserrat';
   color: #1a6bb2;
 }
@@ -42,7 +46,7 @@ select {
 }
 
 #panel-container {
-  margin-top: 5%;
+  margin-top: 15%;
   width: 50%;
 }
 

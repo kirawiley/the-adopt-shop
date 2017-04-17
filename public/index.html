@@ -12,36 +12,39 @@
   </head>
   <body>
 
-    <img src="adopt-shop-logo.png" class="logo" alt="The Adopt Shop">
+    <img src="adopt-shop-logo.png" id="logo" alt="The Adopt Shop">
 
-    <div class="container" id="form-container">
-      <h2 id="slogan">Your new best friend is just a click away...</h2>
+    <div id="search-view">
+      <div class="container" id="form-container">
+        <h2 id="slogan">Your new best friend is just a click away...</h2>
 
-      <div class="well">
-        <form id="pet-form">
-          <select id="type">
-            <option value="">Type</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-          </select>
+        <div class="well">
+          <form id="pet-form">
+            <select id="type">
+              <option value="">Type</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
 
-          <select id="breed">
-            <option value="">Breed (Optional)</option>
-            <option value="australianshepherd">Australian Shepherd</option>
-            <option value="havanese">Havanese</option>
-            <option value="irishsetter">Irish Setter</option>
-          </select>
+            <select id="breed">
+              <option value="">Breed (Optional)</option>
+              <option value="Australian Shepherd">Australian Shepherd Dog</option>
+              <option value="Havanese">Havanese Dog</option>
+              <option value="Irish Setter">Irish Setter Dog</option>
+              <option value="Snowshoe">Snowshoe Cat</option>
+              <option value="Bengal">Bengal Cat</option>
+            </select>
 
-          <select id="gender">
-            <option value="">Gender</option>
-            <option value="female">Female</option>
-            <option value="male">Male</option>
-            <option value="either">Either</option>
-          </select>
+            <select id="gender">
+              <option value="">Gender (Optional)</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
 
-        <button type="button" class="btn btn-primary" id="find-pet-button">
-            <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Find a Pet!</button>
-        </form>
+          <button type="button" class="btn btn-primary" id="find-pet-button">
+              <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Find a Pet!</button>
+          </form>
+        </div>
       </div>
     </div>
 

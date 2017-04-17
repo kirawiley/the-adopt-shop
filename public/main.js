@@ -1,9 +1,11 @@
 var panelContainer = document.getElementById('panel-container')
+var searchPage = document.getElementById('search-view')
 var formContainer = document.getElementById('form-container')
 var typeInput = document.querySelector('#type')
 var breedInput = document.querySelector('#breed')
 var genderInput = document.querySelector('#gender')
 var findPetButton = document.getElementById('find-pet-button')
+var logo = document.getElementById('logo')
 
 function renderPets(pet) {
   var panel = document.createElement('div')
@@ -38,9 +40,9 @@ function renderPets(pet) {
 
   return panel
 }
-var queryString = '?'
 
 function makeQueryString(params) {
+  var queryString = '?'
   var keys = Object.keys(params)
   keys.forEach((property) => {
     if (params[property] !== '') {
@@ -51,7 +53,7 @@ function makeQueryString(params) {
   return queryString
 }
 
-function fetchPets() {
+function fetchPets(queryString) {
   fetch('/pets' + queryString)
   .then((response) => {
     return response.json()
@@ -65,19 +67,22 @@ findPetButton.addEventListener('click', (event) => {
   if (typeInput.value === '') {
     alert('Please choose a type of pet!')
   }
-  else if (genderInput.value === '') {
-    alert('Please choose a gender!')
+
+  else {
+    var searchParams = {
+      type: typeInput.value,
+      breed: breedInput.value,
+      gender: genderInput.value
+    }
+    fetchPets(makeQueryString(searchParams))
+
+    searchPage.classList.add('invisible')
+    panelContainer.classList.remove('invisible')
   }
-  var searchParams = {
-    type: typeInput.value,
-    breed: breedInput.value,
-    gender: genderInput.value
-  }
+})
 
-  fetchPets()
-
-  //formContainer.classList.add('invisible')
-  //panelContainer.classList.remove('invisible')
-
-  console.log(makeQueryString(searchParams))
+logo.addEventListener('click', (event) => {
+  searchPage.classList.remove('invisible')
+  panelContainer.classList.add('invisible')
+  panelContainer.innerHTML = ''
 })
