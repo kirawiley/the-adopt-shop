@@ -29,7 +29,8 @@ module.exports = [
     breed: 'Cocker Spaniel',
     gender: 'Male',
     age: '2 years',
-    image: 'http://kingofwallpapers.com/cocker-spaniel/cocker-spaniel-015.jpg'
+    image: 'http://kingofwallpapers.com/cocker-spaniel/cocker-spaniel-015.jpg',
+    noCats: true
   },
   {
     type: 'Dog',
@@ -61,7 +62,7 @@ module.exports = [
     breed: 'Irish Setter',
     gender: 'Male',
     age: '6 months',
-    image: 'https://www.europuppy.com/wp-content/uploads/desc37-1024x640.jpg'
+    image: 'https://www.europuppy.com/wp-content/uploads/desc37-1024x640.jpg',
   },
   {
     type: 'Dog',
@@ -69,7 +70,8 @@ module.exports = [
     breed: 'Siberian Husky',
     gender: 'Male',
     age: '10 months',
-    image: 'http://www.siberianhuskyrescue.org/wp-content/uploads/jack-1.jpg'
+    image: 'http://www.siberianhuskyrescue.org/wp-content/uploads/jack-1.jpg',
+    noCats: true
   },
   {
     type: 'Dog',
@@ -93,7 +95,8 @@ module.exports = [
     breed: 'American Shorthair',
     gender: 'Female',
     age: '1 year',
-    image: 'http://www.catbreedsjunction.com/images/american-shorthair-cat-breed.jpg'
+    image: 'http://www.catbreedsjunction.com/images/american-shorthair-cat-breed.jpg',
+    noDogs: true
   },
   {
     type: 'Cat',

@@ -5,12 +5,50 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
     <title>The Adopt Shop</title>
   </head>
   <body>
 
-    <div class="container" id="panel-container">
+    <img src="adopt-shop-logo.png" id="logo" alt="The Adopt Shop">
+
+    <div id="search-view">
+      <div class="container" id="form-container">
+        <h2 id="slogan">Your new best friend is just a click away...</h2>
+
+        <div class="well">
+          <form id="pet-form">
+            <select id="type">
+              <option value="">Type</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+
+            <select id="breed">
+              <option value="">Breed (Optional)</option>
+              <option value="Australian Shepherd">Australian Shepherd Dog</option>
+              <option value="Havanese">Havanese Dog</option>
+              <option value="Irish Setter">Irish Setter Dog</option>
+              <option value="Snowshoe">Snowshoe Cat</option>
+              <option value="Bengal">Bengal Cat</option>
+            </select>
+
+            <select id="gender">
+              <option value="">Gender (Optional)</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+
+          <button type="button" class="btn btn-primary" id="find-pet-button">
+              <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Find a Pet!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container invisible" id="panel-container">
     </div>
 
     <script src="main.js"></script>
