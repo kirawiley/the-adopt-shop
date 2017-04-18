@@ -7,6 +7,10 @@ var genderInput = document.querySelector('#gender')
 var findPetButton = document.getElementById('find-pet-button')
 var logo = document.getElementById('logo')
 
+var searchResults = document.createElement('h4')
+searchResults.setAttribute('id', 'search-results')
+searchResults.textContent = 'Pet results:'
+
 function renderPets(pet) {
   var panel = document.createElement('div')
   panel.classList.add('panel')
@@ -30,6 +34,28 @@ function renderPets(pet) {
   var petDetails = document.createElement('p')
   petDetails.classList.add('pet-details')
   petDetails.textContent = pet.breed + ' - ' + pet.age + ' - ' + pet.gender
+
+  var circleSlash = document.createElement('img')
+  circleSlash.setAttribute('src', 'circle-slash-icon.jpg')
+  circleSlash.setAttribute('id', 'circle-slash-icon')
+
+  var noCats = document.createElement('img')
+  noCats.setAttribute('src', 'cat-icon.svg')
+  noCats.setAttribute('id', 'no-cats-icon')
+
+  var noDogs = document.createElement('img')
+  noDogs.setAttribute('src', 'dog-icon.png')
+  noDogs.setAttribute('id', 'no-dogs-icon')
+
+  if (pet.hasOwnProperty('noCats') === true) {
+    panelBody.appendChild(circleSlash)
+    panelBody.appendChild(noCats)
+  }
+
+  if (pet.hasOwnProperty('noDogs') === true) {
+    panelBody.appendChild(circleSlash)
+    panelBody.appendChild(noDogs)
+  }
 
   panel.appendChild(panelHeading)
   panel.appendChild(panelBody)
@@ -78,6 +104,7 @@ findPetButton.addEventListener('click', (event) => {
 
     searchPage.classList.add('invisible')
     panelContainer.classList.remove('invisible')
+    panelContainer.appendChild(searchResults)
   }
 })
 

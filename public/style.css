@@ -2,6 +2,10 @@
   display: none;
 }
 
+body {
+  font-family: 'Montserrat';
+}
+
 #search-view {
   background-image: url(cat-dog-friends.jpg);
   background-size: cover;
@@ -21,7 +25,6 @@
 
 #slogan {
   margin-top: 40%;
-  font-family: 'Montserrat';
   color: #1a6bb2;
 }
 
@@ -42,12 +45,22 @@ select {
   border-style: none;
   background: rgba(94, 96, 109, 0.3);
   transform: translateY(-50%);
-  font-family: 'Montserrat';
+}
+
+#search-results {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  color: #1a6bb2;
 }
 
 #panel-container {
   margin-top: 15%;
   width: 50%;
+}
+
+.panel {
+  border-radius: 0;
+  border-style: none;
 }
 
 .panel-body {
@@ -69,4 +82,25 @@ select {
   top: 25%;
   font-size: 15px;
   color: #1a6bb2;
+}
+
+#no-cats-icon {
+  position: absolute;
+  left: 26%;
+  top: 55%;
+  width: 5%;
+}
+
+#no-dogs-icon {
+  position: absolute;
+  left: 27%;
+  top: 56%;
+  width: 4.5%;
+}
+
+#circle-slash-icon {
+  position: absolute;
+  left: 25%;
+  top: 51%;
+  width: 5%;
 }
