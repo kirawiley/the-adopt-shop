@@ -14,7 +14,7 @@ var addName = document.getElementById('name-input')
 var addBreed = document.getElementById('breed-input')
 var addAge = document.getElementById('age-input')
 var addGender = document.getElementById('add-pet-gender')
-var addImage = document.getElementById('add-image')
+var addImage = document.getElementById('image-input')
 var noCatsCheckbox = document.getElementById('cat-checkbox')
 var noDogsCheckbox = document.getElementById('dog-checkbox')
 
@@ -129,8 +129,6 @@ findPetButton.addEventListener('click', (event) => {
   }
 })
 
-/* http://az616578.vo.msecnd.net/files/2016/06/17/636017344804814168-1934845513_PUG.jpg */
-
 postButton.addEventListener('click', (event) => {
   var petToPost = {
     type: addType.value,
@@ -138,7 +136,7 @@ postButton.addEventListener('click', (event) => {
     breed: addBreed.value,
     age: addAge.value,
     gender: addGender.value,
-    //image: addImage.value
+    image: addImage.value
   }
 
   if (noCatsCheckbox.checked === true) {
@@ -157,6 +155,7 @@ postButton.addEventListener('click', (event) => {
       addBreed.value = ''
       addAge.value = ''
       addGender.value = ''
+      addImage.value = ''
       noCatsCheckbox.checked = false
       noDogsCheckbox.checked = false
     })
