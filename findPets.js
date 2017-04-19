@@ -1,5 +1,5 @@
 module.exports = function findPets(type, breed, gender, pets) {
-  var searchedPets = []
+  var searchedPets = pets.concat([])
 
   if (type !== '' && type !== undefined) {
    searchedPets = pets.filter((pet) => {

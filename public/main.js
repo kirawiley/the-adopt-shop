@@ -5,6 +5,8 @@ var typeInput = document.querySelector('#type')
 var breedInput = document.querySelector('#breed')
 var genderInput = document.querySelector('#gender')
 var findPetButton = document.getElementById('find-pet-button')
+var addPetContainer = document.getElementById('add-pet-container')
+var addPetButton = document.getElementById('add-pet-button')
 var logo = document.getElementById('logo')
 
 var searchResults = document.createElement('h4')
@@ -111,5 +113,11 @@ findPetButton.addEventListener('click', (event) => {
 logo.addEventListener('click', (event) => {
   searchPage.classList.remove('invisible')
   panelContainer.classList.add('invisible')
+  addPetContainer.classList.add('invisible')
   panelContainer.innerHTML = ''
+})
+
+addPetButton.addEventListener('click', (event) => {
+  searchPage.classList.add('invisible')
+  addPetContainer.classList.remove('invisible')
 })

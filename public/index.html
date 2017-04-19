@@ -19,7 +19,7 @@
         <h2 id="slogan">Your new best friend is just a click away...</h2>
 
         <div class="well">
-          <form id="pet-form">
+          <form id="find-pet-form">
             <select id="type">
               <option value="">Type</option>
               <option value="dog">Dog</option>
@@ -41,11 +41,37 @@
               <option value="male">Male</option>
             </select>
 
-          <button type="button" class="btn btn-primary" id="find-pet-button">
+            <button type="button" class="btn btn-primary" id="find-pet-button">
               <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Find a Pet!</button>
           </form>
         </div>
       </div>
+      <div id="question-bubble">
+        <p id="question">Do you have an animal that needs a home?</p>
+        <button type="button" class="btn btn-primary" id="add-pet-button">
+        <i class="fa fa-paw" aria-hidden="true"></i>&nbsp; Add a Pet!</button>
+      </div>
+    </div>
+
+    <div class="container invisible" id="add-pet-container">
+      <h3 id="add-form-header">Tell us about your animal:</h3>
+      <form id="add-pet-form">
+        <select id="add-pet-type">
+          <option value="">Type</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+        <p>Name: &nbsp;<input id="name-input" type="text"></p>
+        <p>Breed: &nbsp;<input id="breed-input" type="text"></p>
+        <p>Age: &nbsp;<input id="age-input" type="text"></p>
+        <select id="add-pet-gender">
+          <option value="">Gender</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+
+        <button type="button" class="btn btn-primary" id="add-form-button">Post</button>
+      </form>
     </div>
 
     <div class="container invisible" id="panel-container">
