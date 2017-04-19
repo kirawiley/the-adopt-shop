@@ -14,6 +14,9 @@ var addName = document.getElementById('name-input')
 var addBreed = document.getElementById('breed-input')
 var addAge = document.getElementById('age-input')
 var addGender = document.getElementById('add-pet-gender')
+var addImage = document.getElementById('add-image')
+var noCatsCheckbox = document.getElementById('cat-checkbox')
+var noDogsCheckbox = document.getElementById('dog-checkbox')
 
 var searchResults = document.createElement('h4')
 searchResults.setAttribute('id', 'search-results')
@@ -98,12 +101,12 @@ function fetchPets(queryString) {
 }
 
 function addPet(pet) {
-  fetch('/pets', {
-    method: POST,
-    body: json.stringify(pet)
-  })
-  .then((response) => {
-    return response.json()
+  return fetch('/pets', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(pet)
   })
 }
 
@@ -126,15 +129,37 @@ findPetButton.addEventListener('click', (event) => {
   }
 })
 
+/* http://az616578.vo.msecnd.net/files/2016/06/17/636017344804814168-1934845513_PUG.jpg */
+
 postButton.addEventListener('click', (event) => {
   var petToPost = {
     type: addType.value,
     name: addName.value,
     breed: addBreed.value,
     age: addAge.value,
-    gender: addGender.value
+    gender: addGender.value,
+    //image: addImage.value
   }
-  console.log(petToPost)
+
+  if (noCatsCheckbox.checked === true) {
+    petToPost.noCats = true
+  }
+
+  else if (noDogsCheckbox.checked === true) {
+    petToPost.noDogs = true
+  }
+
+  addPet(petToPost)
+    .then(() => {
+      alert(petToPost.name + ' is posted for adoption!')
+      addType.value = ''
+      addName.value = ''
+      addBreed.value = ''
+      addAge.value = ''
+      addGender.value = ''
+      noCatsCheckbox.checked = false
+      noDogsCheckbox.checked = false
+    })
 })
 
 logo.addEventListener('click', (event) => {

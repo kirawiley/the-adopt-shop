@@ -137,7 +137,7 @@ body {
   top: 20%;
   left: 35%;
   width: 30%;
-  height: 40%;
+  height: 50%;
   border: 3px dashed #1a6bb2;
   background-color: #edeff2;
 }
@@ -156,6 +156,7 @@ body {
 #add-pet-form select {
   width: 25%;
   margin-top: 5%;
+  left: 3%;
 }
 
 #add-pet-form p {
@@ -163,11 +164,9 @@ body {
 }
 
 #age-input {
-  margin-left: 2%;
+  margin-left: 3%;
 }
 
 #add-form-button {
-  position: absolute;
-  top: 80%;
-  left: 47%;
+  margin-top: 5%;
 }
