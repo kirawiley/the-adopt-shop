@@ -24,7 +24,8 @@ body {
 }
 
 #slogan {
-  margin-top: 40%;
+  position: absolute;
+  top: 35%;
   color: #1a6bb2;
 }
 
