@@ -8,6 +8,12 @@ var findPetButton = document.getElementById('find-pet-button')
 var addPetContainer = document.getElementById('add-pet-container')
 var addPetButton = document.getElementById('add-pet-button')
 var logo = document.getElementById('logo')
+var postButton = document.getElementById('add-form-button')
+var addType = document.getElementById('add-pet-type')
+var addName = document.getElementById('name-input')
+var addBreed = document.getElementById('breed-input')
+var addAge = document.getElementById('age-input')
+var addGender = document.getElementById('add-pet-gender')
 
 var searchResults = document.createElement('h4')
 searchResults.setAttribute('id', 'search-results')
@@ -91,6 +97,16 @@ function fetchPets(queryString) {
   })
 }
 
+function addPet(pet) {
+  fetch('/pets', {
+    method: POST,
+    body: json.stringify(pet)
+  })
+  .then((response) => {
+    return response.json()
+  })
+}
+
 findPetButton.addEventListener('click', (event) => {
   if (typeInput.value === '') {
     alert('Please choose a type of pet!')
@@ -108,6 +124,17 @@ findPetButton.addEventListener('click', (event) => {
     panelContainer.classList.remove('invisible')
     panelContainer.appendChild(searchResults)
   }
+})
+
+postButton.addEventListener('click', (event) => {
+  var petToPost = {
+    type: addType.value,
+    name: addName.value,
+    breed: addBreed.value,
+    age: addAge.value,
+    gender: addGender.value
+  }
+  console.log(petToPost)
 })
 
 logo.addEventListener('click', (event) => {
