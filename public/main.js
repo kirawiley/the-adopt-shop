@@ -22,6 +22,10 @@ var searchResults = document.createElement('h4')
 searchResults.setAttribute('id', 'search-results')
 searchResults.textContent = 'Pet results:'
 
+var puppyContainer = document.createElement('div')
+puppyContainer.setAttribute('id', 'puppy-container')
+addPetContainer.appendChild(puppyContainer)
+
 function renderPets(pet) {
   var panel = document.createElement('div')
   panel.classList.add('panel')
@@ -149,7 +153,29 @@ postButton.addEventListener('click', (event) => {
 
   addPet(petToPost)
     .then(() => {
-      alert(petToPost.name + ' is posted for adoption!')
+      var puppyImage = document.createElement('img')
+      puppyImage.setAttribute('src', 'puppy.jpg')
+      puppyImage.setAttribute('id', 'add-form-puppy')
+
+      var speechBubble = document.createElement('img')
+      speechBubble.setAttribute('src', 'speech-bubble.png')
+      speechBubble.setAttribute('id', 'speech-bubble')
+
+      var petIsPosted = document.createElement('p')
+      petIsPosted.setAttribute('id', 'bubble-words')
+      petIsPosted.textContent = ' is posted for adoption!'
+
+      var postedPetName = document.createElement('p')
+      postedPetName.setAttribute('id', 'posted-pet-name')
+      postedPetName.textContent = petToPost.name
+
+      puppyContainer.appendChild(puppyImage)
+      puppyContainer.appendChild(speechBubble)
+      puppyContainer.appendChild(petIsPosted)
+      puppyContainer.appendChild(postedPetName)
+
+      puppyContainer.classList.remove('invisible')
+
       addType.value = ''
       addName.value = ''
       addBreed.value = ''
@@ -171,4 +197,5 @@ logo.addEventListener('click', (event) => {
 addPetButton.addEventListener('click', (event) => {
   searchPage.classList.add('invisible')
   addPetContainer.classList.remove('invisible')
+  puppyContainer.classList.add('invisible')
 })

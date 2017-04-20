@@ -41,11 +41,13 @@ body {
 .well select {
   text-align: center;
   width: 20%;
+  height: 30px;
   margin-left: 4%;
 }
 
 .well input {
   margin-left: 4%;
+  height: 30px;
 }
 
 #question-bubble {
@@ -169,4 +171,30 @@ body {
 
 #age-input {
   margin-left: 16px;
+}
+
+#add-form-puppy {
+  position: absolute;
+  top: 490px;
+  left: -40%;
+  width: 40%;
+}
+
+#speech-bubble {
+  position: absolute;
+  top: 330px;
+  left: -60%;
+  width: 40%;
+}
+
+#posted-pet-name {
+  position: absolute;
+  top: 410px;
+  left: -45%;
+}
+
+#bubble-words {
+  position: absolute;
+  top: 440px;
+  left: -53%;
 }
