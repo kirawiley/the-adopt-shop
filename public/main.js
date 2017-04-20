@@ -5,7 +5,18 @@ var typeInput = document.querySelector('#type')
 var breedInput = document.querySelector('#breed')
 var genderInput = document.querySelector('#gender')
 var findPetButton = document.getElementById('find-pet-button')
+var addPetContainer = document.getElementById('add-pet-container')
+var addPetButton = document.getElementById('add-pet-button')
 var logo = document.getElementById('logo')
+var postButton = document.getElementById('add-form-button')
+var addType = document.getElementById('add-pet-type')
+var addName = document.getElementById('name-input')
+var addBreed = document.getElementById('breed-input')
+var addAge = document.getElementById('age-input')
+var addGender = document.getElementById('add-pet-gender')
+var addImage = document.getElementById('image-input')
+var noCatsCheckbox = document.getElementById('cat-checkbox')
+var noDogsCheckbox = document.getElementById('dog-checkbox')
 
 var searchResults = document.createElement('h4')
 searchResults.setAttribute('id', 'search-results')
@@ -89,6 +100,16 @@ function fetchPets(queryString) {
   })
 }
 
+function addPet(pet) {
+  return fetch('/pets', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(pet)
+  })
+}
+
 findPetButton.addEventListener('click', (event) => {
   if (typeInput.value === '') {
     alert('Please choose a type of pet!')
@@ -108,8 +129,46 @@ findPetButton.addEventListener('click', (event) => {
   }
 })
 
+postButton.addEventListener('click', (event) => {
+  var petToPost = {
+    type: addType.value,
+    name: addName.value,
+    breed: addBreed.value,
+    age: addAge.value,
+    gender: addGender.value,
+    image: addImage.value
+  }
+
+  if (noCatsCheckbox.checked === true) {
+    petToPost.noCats = true
+  }
+
+  else if (noDogsCheckbox.checked === true) {
+    petToPost.noDogs = true
+  }
+
+  addPet(petToPost)
+    .then(() => {
+      alert(petToPost.name + ' is posted for adoption!')
+      addType.value = ''
+      addName.value = ''
+      addBreed.value = ''
+      addAge.value = ''
+      addGender.value = ''
+      addImage.value = ''
+      noCatsCheckbox.checked = false
+      noDogsCheckbox.checked = false
+    })
+})
+
 logo.addEventListener('click', (event) => {
   searchPage.classList.remove('invisible')
   panelContainer.classList.add('invisible')
+  addPetContainer.classList.add('invisible')
   panelContainer.innerHTML = ''
+})
+
+addPetButton.addEventListener('click', (event) => {
+  searchPage.classList.add('invisible')
+  addPetContainer.classList.remove('invisible')
 })

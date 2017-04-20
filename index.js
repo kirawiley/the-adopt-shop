@@ -18,6 +18,11 @@ app.get('/pets', (req, res) => {
   res.json(findPets(type, breed, gender, pets))
 })
 
+app.post('/pets', (req, res) => {
+  var newPet = req.body
+  pets.push(newPet)
+  res.sendStatus(201)
+})
 
 app.listen(1996, () => {
   console.log('Listening on port 1996!')

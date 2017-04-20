@@ -24,14 +24,40 @@ body {
 }
 
 #slogan {
-  margin-top: 40%;
+  position: absolute;
+  top: 35%;
   color: #1a6bb2;
 }
 
-select {
+.well select {
   text-align: center;
   width: 20%;
   margin-left: 4%;
+}
+
+#question-bubble {
+  position: absolute;
+  top: 75%;
+  left: 3%;
+  border-radius: 50%;
+  border: 3px dashed #1a6bb2;
+  background-color: #edeff2;
+  width: 300px;
+  height: 300px;
+}
+
+#question {
+  position: absolute;
+  top: 35%;
+  font-size: 140%;
+  text-align: center;
+  color: #1a6bb2;
+}
+
+#add-pet-button {
+  position: absolute;
+  top: 68%;
+  left: 30%;
 }
 
 #find-pet-button {
@@ -65,7 +91,7 @@ select {
 
 .panel-body {
   position: relative;
-  background-color: #b0dbf2;
+  background-color: #edeff2;
 }
 
 .pet-name {
@@ -103,4 +129,44 @@ select {
   left: 25%;
   top: 51%;
   width: 5%;
+}
+
+#add-pet-container {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  left: 35%;
+  width: 30%;
+  height: 50%;
+  border: 3px dashed #1a6bb2;
+  background-color: #edeff2;
+}
+
+#add-form-header {
+  color: #1a6bb2;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+#add-pet-form {
+  margin: auto;
+}
+
+#add-pet-form select {
+  width: 25%;
+  margin-top: 5%;
+  left: 3%;
+}
+
+#add-pet-form p {
+  margin-top: 5%;
+}
+
+#age-input {
+  margin-left: 3%;
+}
+
+#add-form-button {
+  margin-top: 5%;
 }
