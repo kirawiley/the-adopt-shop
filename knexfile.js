@@ -5,7 +5,7 @@ exports.development = {
     database: 'pets'
   },
   migrations: {
-    directory: './the-adopt-shop',
+    directory: './migrations',
     tableName: 'pets'
   }
 }

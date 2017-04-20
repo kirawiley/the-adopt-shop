@@ -6,7 +6,9 @@
   "scripts": {
     "watch": "nodemon .",
     "start": "node .",
-    "migrate:make": "knex migrate:make"
+    "migrate:make": "knex migrate:make",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback"
   },
   "repository": {
     "type": "git",
