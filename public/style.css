@@ -15,8 +15,8 @@ body {
 
 #logo {
   position: absolute;
-  top: 3%;
-  left: 3%;
+  top: 30px;
+  left: 30px;
 }
 
 #logo:hover {
@@ -29,16 +29,30 @@ body {
   color: #1a6bb2;
 }
 
+.well {
+  position: absolute;
+  top: 50%;
+  width: 900px;
+  border-style: none;
+  background: rgba(94, 96, 109, 0.3);
+  transform: translateY(-50%);
+}
+
 .well select {
   text-align: center;
   width: 20%;
   margin-left: 4%;
 }
 
+.well input {
+  margin-left: 4%;
+}
+
 #question-bubble {
   position: absolute;
   top: 75%;
-  left: 3%;
+  left: 30px;
+  bottom: 20px;
   border-radius: 50%;
   border: 3px dashed #1a6bb2;
   background-color: #edeff2;
@@ -64,15 +78,6 @@ body {
   margin-left: 10%;
 }
 
-.well {
-  position: absolute;
-  top: 50%;
-  width: 900px;
-  border-style: none;
-  background: rgba(94, 96, 109, 0.3);
-  transform: translateY(-50%);
-}
-
 #search-results {
   margin-top: 2%;
   margin-bottom: 4%;
@@ -80,7 +85,7 @@ body {
 }
 
 #panel-container {
-  margin-top: 15%;
+  margin-top: 10%;
   width: 50%;
 }
 
@@ -134,10 +139,10 @@ body {
 #add-pet-container {
   position: absolute;
   text-align: center;
-  top: 20%;
-  left: 35%;
-  width: 30%;
-  height: 50%;
+  top: 200px;
+  left: 38%;
+  width: 600px;
+  height: 700px;
   border: 3px dashed #1a6bb2;
   background-color: #edeff2;
 }
@@ -145,28 +150,23 @@ body {
 #add-form-header {
   color: #1a6bb2;
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 3%;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 #add-pet-form {
   margin: auto;
+  line-height: 50px;
 }
 
 #add-pet-form select {
   width: 25%;
-  margin-top: 5%;
-  left: 3%;
 }
 
-#add-pet-form p {
-  margin-top: 5%;
+.text-input {
+  height: 25px;
 }
 
 #age-input {
-  margin-left: 3%;
-}
-
-#add-form-button {
-  margin-top: 5%;
+  margin-left: 16px;
 }
