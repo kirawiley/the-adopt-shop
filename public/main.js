@@ -151,30 +151,34 @@ postButton.addEventListener('click', (event) => {
     petToPost.noDogs = true
   }
 
+  function makePuppy() {
+    var puppyImage = document.createElement('img')
+    puppyImage.setAttribute('src', 'puppy.jpg')
+    puppyImage.setAttribute('id', 'add-form-puppy')
+
+    var speechBubble = document.createElement('img')
+    speechBubble.setAttribute('src', 'speech-bubble.png')
+    speechBubble.setAttribute('id', 'speech-bubble')
+
+    var petIsPosted = document.createElement('p')
+    petIsPosted.setAttribute('id', 'bubble-words')
+    petIsPosted.textContent = ' is posted for adoption!'
+
+    var postedPetName = document.createElement('p')
+    postedPetName.setAttribute('id', 'posted-pet-name')
+    postedPetName.textContent = petToPost.name
+
+    puppyContainer.appendChild(puppyImage)
+    puppyContainer.appendChild(speechBubble)
+    puppyContainer.appendChild(petIsPosted)
+    puppyContainer.appendChild(postedPetName)
+
+    puppyContainer.classList.remove('invisible')
+  }
+
   addPet(petToPost)
     .then(() => {
-      var puppyImage = document.createElement('img')
-      puppyImage.setAttribute('src', 'puppy.jpg')
-      puppyImage.setAttribute('id', 'add-form-puppy')
-
-      var speechBubble = document.createElement('img')
-      speechBubble.setAttribute('src', 'speech-bubble.png')
-      speechBubble.setAttribute('id', 'speech-bubble')
-
-      var petIsPosted = document.createElement('p')
-      petIsPosted.setAttribute('id', 'bubble-words')
-      petIsPosted.textContent = ' is posted for adoption!'
-
-      var postedPetName = document.createElement('p')
-      postedPetName.setAttribute('id', 'posted-pet-name')
-      postedPetName.textContent = petToPost.name
-
-      puppyContainer.appendChild(puppyImage)
-      puppyContainer.appendChild(speechBubble)
-      puppyContainer.appendChild(petIsPosted)
-      puppyContainer.appendChild(postedPetName)
-
-      puppyContainer.classList.remove('invisible')
+      makePuppy()
 
       addType.value = ''
       addName.value = ''
