@@ -51,15 +51,15 @@ function renderPets(pet) {
   petDetails.textContent = pet.breed + ' - ' + pet.age + ' - ' + pet.gender
 
   var circleSlash = document.createElement('img')
-  circleSlash.setAttribute('src', 'circle-slash-icon.jpg')
+  circleSlash.setAttribute('src', 'images/circle-slash-icon.jpg')
   circleSlash.setAttribute('id', 'circle-slash-icon')
 
   var noCats = document.createElement('img')
-  noCats.setAttribute('src', 'cat-icon.svg')
+  noCats.setAttribute('src', 'images/cat-icon.svg')
   noCats.setAttribute('id', 'no-cats-icon')
 
   var noDogs = document.createElement('img')
-  noDogs.setAttribute('src', 'dog-icon.png')
+  noDogs.setAttribute('src', 'images/dog-icon.png')
   noDogs.setAttribute('id', 'no-dogs-icon')
 
   if (pet.hasOwnProperty('noCats') === true) {
@@ -153,11 +153,11 @@ postButton.addEventListener('click', (event) => {
 
   function makePuppy() {
     var puppyImage = document.createElement('img')
-    puppyImage.setAttribute('src', 'puppy.jpg')
+    puppyImage.setAttribute('src', 'images/puppy.jpg')
     puppyImage.setAttribute('id', 'add-form-puppy')
 
     var speechBubble = document.createElement('img')
-    speechBubble.setAttribute('src', 'speech-bubble.png')
+    speechBubble.setAttribute('src', 'images/speech-bubble.png')
     speechBubble.setAttribute('id', 'speech-bubble')
 
     var petIsPosted = document.createElement('p')

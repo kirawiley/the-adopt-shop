@@ -7,7 +7,7 @@ body {
 }
 
 #search-view {
-  background-image: url(cat-dog-friends.jpg);
+  background-image: url(images/cat-dog-friends.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;

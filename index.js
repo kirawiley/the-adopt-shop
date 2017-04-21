@@ -4,12 +4,12 @@ var bodyParser = require('body-parser')
 var parseRequests = bodyParser.json()
 var pets = require('./pets')
 var findPets = require('./findPets')
-var knex = require('./knex')
+var knex = require('knex')
 
 var database = knex({
   client: 'pg',
   connection: {
-    user: 'occs'
+    user: 'occs',
     database: 'pets'
   }
 })
@@ -36,7 +36,6 @@ app.post('/pets', (req, res) => {
   database
     .insert(req.body)
     .into('pets')
-    })
 })
 
 app.listen(1996, () => {
