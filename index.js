@@ -4,6 +4,15 @@ var bodyParser = require('body-parser')
 var parseRequests = bodyParser.json()
 var pets = require('./pets')
 var findPets = require('./findPets')
+var knex = require('./knex')
+
+var database = knex({
+  client: 'pg',
+  connection: {
+    user: 'occs'
+    database: 'pets'
+  }
+})
 
 app.use(parseRequests)
 
@@ -15,13 +24,19 @@ app.get('/pets', (req, res) => {
   var breed = queryParams.breed
   var gender = queryParams.gender
 
-  res.json(findPets(type, breed, gender, pets))
+  database
+    .select(findPets(type, breed, gender, database))
+    .from('pets')
+    .then((pets) => {
+      res.json(pets)
+    })
 })
 
 app.post('/pets', (req, res) => {
-  var newPet = req.body
-  pets.push(newPet)
-  res.sendStatus(201)
+  database
+    .insert(req.body)
+    .into('pets')
+    })
 })
 
 app.listen(1996, () => {

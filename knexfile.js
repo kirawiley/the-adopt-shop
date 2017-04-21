@@ -6,6 +6,6 @@ exports.development = {
   },
   migrations: {
     directory: './migrations',
-    tableName: 'pets'
+    tableName: 'knex_migrations'
   }
 }
