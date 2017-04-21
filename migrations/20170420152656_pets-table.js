@@ -1,3 +1,4 @@
+var pets = require('./pets')
 
 exports.up = function(knex, Promise) {
   const query = knex.schema.createTable('pets', (table) => {
@@ -9,7 +10,7 @@ exports.up = function(knex, Promise) {
     table.string('gender')
     table.string('image')
   })
-  return query
+  return query.insert(pets)
 }
 
 exports.down = function(knex, Promise) {
