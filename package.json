@@ -6,6 +6,8 @@
   "scripts": {
     "watch": "nodemon .",
     "start": "node .",
+    "seed:make": "knex seed:make",
+    "seed:run": "knex seed:run",
     "migrate:make": "knex migrate:make",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback"
